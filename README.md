@@ -8,11 +8,9 @@ A fluent and friendly wrapper for Node's Child Process spawning stuff.
 
 To install
 
-	npm install spawner
+    npm install spawner
 
-
-
-In your javascript file.
+In your javascript...
 
 	var spawner = require('spawner');
 
@@ -27,9 +25,9 @@ In your javascript file.
 
 ### .inWorkingDirectory( `path` )
 
-	spawner()
-	  .withArguments( args )
-	  .inWorkingDirectory('/path/to/wd')
+    spawner()
+      .withArguments( args )
+      .inWorkingDirectory('/path/to/wd')
 
   Defines the working directory for the process to be spawned in.
 
@@ -42,21 +40,21 @@ In your javascript file.
 
 ### .onStderr( `callback` )
 
-   spawner()
-     .onStderr( callback )
+    spawner()
+      .onStderr( callback )
 
   callback gets a stream from the process stderr. By default it is logged to the console.
 
 ### .spawn(`pathToExecutable`, `callback`)
 
-   spawner()
-     .withArguments( args )
-     .inWorkingDirectory( folder )
-     .spawn( 'node' , function(err){
- 
- 	    // err = process exit code.
+    spawner()
+      .withArguments( args )
+      .inWorkingDirectory( folder )
+      .spawn( 'node' , function(err){
 
-     })
+        // err = process exit code.
+
+    })
 
 ## Licence
 
